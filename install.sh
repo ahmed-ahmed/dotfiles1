@@ -8,5 +8,5 @@ mkdir ~/bk
 mv .zshrc ~/bk
 
 # install dotfiles 
-ln -sv “./.zshrc” ~
+ln -sv ./.zshrc ~
 
