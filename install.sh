@@ -9,6 +9,7 @@ if [ -f ~/.zshrc ]; then
    mv ~/.zshrc ~/bk
 fi
 
-# install dotfiles 
-ln -sv ./.zshrc ~/.zshrc
+# install dotfiles
+DIR="$(cd "$(dirname "$0")" && pwd -P)"
+ln -sv $DIR/.zshrc ~
 

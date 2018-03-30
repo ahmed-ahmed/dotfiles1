@@ -1,25 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-DEFAULT_USER="ama29"
-# Multi TMUX
-
-function multi-node-tmux(){
-  base_name="${1}"
-  node_count="${2}"
-  tmux new-window
-  tmux setw pane-base-index 1
-  for (( PANE=1; PANE<=${node_count}; PANE++ ))
-  do  
-    tmux split-window
-    tmux select-layout even-vertical
-    tmux send-keys -t $PANE "ssh-to $base_name$PANE" Enter
-  done;
-  tmux kill-pane -t $(echo $node_count + 1 | bc) 
-  tmux select-layout even-vertical
-  tmux setw synchronize-panes
-}
-
+DEFAULT_USER=""
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -68,7 +50,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm sudo git-extras github gradle mvn)
+plugins=(git npm sudo git-extras github gradle mvn docker)
 
 # User configuration
 
@@ -78,7 +60,7 @@ plugins=(git npm sudo git-extras github gradle mvn)
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
