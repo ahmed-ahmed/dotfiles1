@@ -1,8 +1,7 @@
 # install zsh
-sudo apt-get update && sudo apt-get -y install zsh
+sudo apt-get update && sudo apt-get -y install zsh fonts-powerline
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-sudo apt-get install fonts-powerline
 
 # backup dotfiles
 mkdir ~/bk
@@ -11,5 +10,5 @@ if [ -f ~/.zshrc ]; then
 fi
 
 # install dotfiles 
-ln -sv ./.zshrc ~
+ln -sv ./.zshrc ~/.zshrc
 
