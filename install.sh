@@ -14,6 +14,7 @@ if [ -f ~/.zshrc ]; then
 fi
 
 # install dotfiles
+cd ~/dotfiles1
 DIR="$(cd "$(dirname "$0")" && pwd -P)"
 ln -sv $DIR/.zshrc ~
 
