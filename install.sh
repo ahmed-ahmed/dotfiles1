@@ -4,7 +4,7 @@ chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # install ZSH Syntax Highlighting Plugin
-cd ~/.oh-my-zsh/custom/
+cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # backup dotfiles
