@@ -6,6 +6,17 @@ set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+set t_Co=256
+set term=xterm-256color
+colorscheme grb256 
+
 "CtrlP plugin
-set runtimepath^=.vim/bundle/ctrlp.vim
+set runtimepath^=/home/ama29/.vim/bundle/ctrlp.vim
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree'
+
+" Initialize plugin system
+call plug#end()
 
