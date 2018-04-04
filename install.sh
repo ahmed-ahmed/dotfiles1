@@ -17,4 +17,4 @@ fi
 cd ~/dotfiles1
 DIR="$(cd "$(dirname "$0")" && pwd -P)"
 ln -sv $DIR/.zshrc ~
-
+ln -sv $DIR/.vimrc ~
