@@ -6,3 +6,6 @@ set showmatch           " highlight matching [{()}]
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+"CtrlP plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
