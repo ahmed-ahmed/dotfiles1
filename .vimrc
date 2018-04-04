@@ -7,5 +7,5 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
 "CtrlP plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=.vim/bundle/ctrlp.vim
 
